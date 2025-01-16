@@ -31,35 +31,40 @@ const Header = ({ t }: { t: TFunction }) => {
       });
       setVisibility(false);
     };
+  
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
+        {/* Uncomment these buttons if needed in the future */}
+        {/* 
+        <CustomNavLinkSmall onClick={() => scrollTo("about")}> 
           <Span>{t("About")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
           <Span>{t("Mission")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <Span>{t("Product")}</Span>
+          <Span>{t("Product")}</Span>              // These buttons are currently unused but can be re-enabled if additional sections are added to the site.
         </CustomNavLinkSmall>
+        */}
         <CustomNavLinkSmall
           style={{ width: "180px" }}
           onClick={() => scrollTo("contact")}
         >
           <Span>
-            <Button>{t("Contact")}</Button>
+            <Button>{t("Contactați-ne")}</Button>
           </Span>
         </CustomNavLinkSmall>
       </>
     );
   };
+  
 
   return (
     <HeaderSection>
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="101px" height="64px" />
+            <SvgIcon src="logocpc_new.svg" width="200px" height="auto" />
           </LogoContainer>
           <NotHidden>
             <MenuItem />

@@ -10,58 +10,62 @@ import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
 import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
 
-const Contact = ({ title, content, id, t }: ContactProps) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(validate);
-
-  const ValidationType = ({ type }: ValidationTypeProps) => {
-    const ErrorMessage = errors[type as keyof typeof errors];
-    return <Span>{ErrorMessage}</Span>;
-  };
-
+const Contact = ({ id, title, content }: { id: string; title: string; content: string }) => {
   return (
     <ContactContainer id={id}>
-      <Row justify="space-between" align="middle">
-        <Col lg={12} md={11} sm={24} xs={24}>
-          <Slide direction="left" triggerOnce>
-            <Block title={title} content={content} />
-          </Slide>
-        </Col>
-        <Col lg={12} md={12} sm={24} xs={24}>
-          <Slide direction="right" triggerOnce>
-            <FormGroup autoComplete="off" onSubmit={handleSubmit}>
-              <Col span={24}>
-                <Input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={values.name || ""}
-                  onChange={handleChange}
-                />
-                <ValidationType type="name" />
-              </Col>
-              <Col span={24}>
-                <Input
-                  type="text"
-                  name="email"
-                  placeholder="Your Email"
-                  value={values.email || ""}
-                  onChange={handleChange}
-                />
-                <ValidationType type="email" />
-              </Col>
-              <Col span={24}>
-                <TextArea
-                  placeholder="Your Message"
-                  value={values.message || ""}
-                  name="message"
-                  onChange={handleChange}
-                />
-                <ValidationType type="message" />
-              </Col>
-              <ButtonContainer>
-                <Button name="submit">{t("Submit")}</Button>
-              </ButtonContainer>
-            </FormGroup>
+      <Row justify="center" align="top" gutter={[32, 32]}>
+        <Col lg={16} md={20} sm={24} xs={24}>
+          <Slide direction="up" triggerOnce>
+            <div style={{ textAlign: "center", padding: "20px", background: "#f7f7f7", borderRadius: "8px" }}>
+              {/* Title */}
+              <h2
+                style={{
+                  fontSize: "2.5rem",
+                  fontWeight: "bold",
+                  color: "#18216D",
+                  marginBottom: "10px",
+                }}
+              >
+                {title}
+              </h2>
+              
+              {/* Content */}
+              <p
+                style={{
+                  fontSize: "1.2rem",
+                  color: "#555",
+                  marginBottom: "20px",
+                  lineHeight: "1.6",
+                  fontWeight: "normal",
+                }}
+              >
+                {content}
+              </p>
+              
+              {/* Phone Number */}
+              <h1
+                style={{
+                  fontSize: "2rem",
+                  color: "#18216D",
+                  marginBottom: "10px",
+                  fontWeight: "bold",
+                }}
+              >
+                 <span style={{ fontSize: "2rem", color: "#0061F2" }}>+40 123 456 789</span>
+              </h1>
+
+              {/* Email */}
+              <h3
+                style={{
+                  fontSize: "1.5rem",
+                  color: "#18216D",
+                  marginBottom: "20px",
+                  fontWeight: "normal",
+                }}
+              >
+                Email: <span style={{ color: "#0061F2" }}>contact@crisprofi.ro</span>
+              </h3>
+            </div>
           </Slide>
         </Col>
       </Row>
@@ -69,4 +73,4 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
   );
 };
 
-export default withTranslation()(Contact);
+export default Contact;

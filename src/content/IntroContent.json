@@ -1,12 +1,17 @@
 {
-  "title": "Landing page template for developers & startups",
-  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "title": "Serviciile Noastre",
+  "text": "Oferim următoarele servicii profesionale pentru apartamente de bloc și case:",
+  "list": [
+    "Inventar calorifere",
+    "Calcul suprafață echivalentă termică pentru apartamente de bloc și case",
+    "Calcul suprafață proiect inițial încălzire apartamente",
+    "Consiliere tehnică pentru suprafețe de încălzire",
+    "Servicii de consiliere energetică pentru asociații de proprietari",
+    "Tipuri calorifere: fontă, aluminiu, tablă de oțel, scăriță baie"
+  ],
   "button": [
     {
-      "title": "Explore"
-    },
-    {
-      "title": "Learn more",
+      "title": "Contactați-ne",
       "color": "#fff"
     }
   ]

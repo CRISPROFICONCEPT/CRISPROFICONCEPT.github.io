@@ -8,6 +8,7 @@ export interface ContentBlockProps {
     content: string;
     icon: string;
   }[];
+  list?: string[]; // Add this field
   button?: (
     | {
         title: string;

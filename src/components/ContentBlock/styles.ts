@@ -60,3 +60,19 @@ export const ButtonWrapper = styled("div")`
     margin-left: 20px;
   }
 `;
+
+export const List = styled("ul")`
+  margin: 1.5rem 0 2rem 0; /* Match the margin of Content */
+  padding-left: 1.5rem; /* Add left padding for bullets */
+  list-style: disc;
+
+  li {
+    font-family: "Motiva Sans Light", sans-serif; /* Use the global font */
+    font-size: 21px; /* Match paragraph font size */
+    line-height: 1.41; /* Match paragraph line height */
+    color: #18216d; /* Match paragraph text color */
+    margin-bottom: 0.5rem; /* Add spacing between list items */
+  }
+`;
+
+

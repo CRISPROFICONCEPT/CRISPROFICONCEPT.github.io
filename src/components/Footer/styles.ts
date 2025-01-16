@@ -38,16 +38,26 @@ export const Extra = styled("section")`
   padding-bottom: 2rem;
 `;
 
-export const LogoContainer = styled("div")`
+
+export const LogoContainer = styled(Link)`
   display: flex;
-  position: relative;
+  align-items: center;
+
+  svg {
+    max-width: 120px;
+    height: auto;
+  }
 `;
 
-export const Para = styled("div")`
-  color: #18216d;
-  font-size: 14px;
-  width: 70%;
+export const Para = styled("p")`
+  font-size: 14px; /* Maintain a readable font size */
+  color: #18216d; /* Ensure the text color is consistent */
+  line-height: 1.8; /* Increase line height for better spacing */
+  margin: 0; /* Reset margins to avoid unnecessary spacing */
+  transition: all 0.3s ease-in-out;
+
 `;
+
 
 export const Large = styled(Link)`
   font-size: 16px;

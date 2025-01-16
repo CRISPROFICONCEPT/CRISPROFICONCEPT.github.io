@@ -20,37 +20,38 @@ const Home = () => {
         direction="right"
         title={IntroContent.title}
         content={IntroContent.text}
-        button={IntroContent.button}
-        icon="developer.svg"
+        list={IntroContent.list} // Pass the list here
+        button={IntroContent.button} // Single button remains
+        icon="engineer.svg"
         id="intro"
       />
-      <MiddleBlock
+      {/* <MiddleBlock
         title={MiddleBlockContent.title}
         content={MiddleBlockContent.text}
         button={MiddleBlockContent.button}
-      />
-      <ContentBlock
+      /> */}
+      {/* <ContentBlock
         direction="left"
         title={AboutContent.title}
         content={AboutContent.text}
         section={AboutContent.section}
         icon="graphs.svg"
         id="about"
-      />
-      <ContentBlock
+      /> */}
+      {/* <ContentBlock
         direction="right"
         title={MissionContent.title}
         content={MissionContent.text}
         icon="product-launch.svg"
         id="mission"
-      />
-      <ContentBlock
+      /> */}
+      {/* <ContentBlock
         direction="left"
         title={ProductContent.title}
         content={ProductContent.text}
         icon="waving.svg"
         id="product"
-      />
+      /> */}
       <Contact
         title={ContactContent.title}
         content={ContactContent.text}
